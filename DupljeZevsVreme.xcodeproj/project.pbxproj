@@ -22,6 +22,14 @@
 		F911443425FB799E00B8D9BA /* DupljeZevsVremeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F911443225FB799E00B8D9BA /* DupljeZevsVremeModel.swift */; };
 		F911443825FB9AAE00B8D9BA /* DupljeZevsVremeModelBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F911443725FB9AAE00B8D9BA /* DupljeZevsVremeModelBuilder.swift */; };
 		F911443925FB9AAE00B8D9BA /* DupljeZevsVremeModelBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F911443725FB9AAE00B8D9BA /* DupljeZevsVremeModelBuilder.swift */; };
+		F911446E25FBA8BE00B8D9BA /* SunViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F911446625FBA8BE00B8D9BA /* SunViewModel.swift */; };
+		F911446F25FBA8BE00B8D9BA /* WindViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F911446725FBA8BE00B8D9BA /* WindViewModel.swift */; };
+		F911447025FBA8BE00B8D9BA /* RainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F911446825FBA8BE00B8D9BA /* RainViewModel.swift */; };
+		F911447125FBA8BE00B8D9BA /* PressureViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F911446925FBA8BE00B8D9BA /* PressureViewModel.swift */; };
+		F911447225FBA8BE00B8D9BA /* HumidityViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F911446A25FBA8BE00B8D9BA /* HumidityViewModel.swift */; };
+		F911447325FBA8BE00B8D9BA /* WeatherViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F911446B25FBA8BE00B8D9BA /* WeatherViewModelProtocol.swift */; };
+		F911447425FBA8BE00B8D9BA /* TemperatureViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F911446C25FBA8BE00B8D9BA /* TemperatureViewModel.swift */; };
+		F911447525FBA8BE00B8D9BA /* CurrentWeatherViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F911446D25FBA8BE00B8D9BA /* CurrentWeatherViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +72,14 @@
 		F911442A25FB77AA00B8D9BA /* DupljeZevsVremeAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DupljeZevsVremeAPIClient.swift; sourceTree = "<group>"; };
 		F911443225FB799E00B8D9BA /* DupljeZevsVremeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DupljeZevsVremeModel.swift; sourceTree = "<group>"; };
 		F911443725FB9AAE00B8D9BA /* DupljeZevsVremeModelBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DupljeZevsVremeModelBuilder.swift; sourceTree = "<group>"; };
+		F911446625FBA8BE00B8D9BA /* SunViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SunViewModel.swift; sourceTree = "<group>"; };
+		F911446725FBA8BE00B8D9BA /* WindViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WindViewModel.swift; sourceTree = "<group>"; };
+		F911446825FBA8BE00B8D9BA /* RainViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RainViewModel.swift; sourceTree = "<group>"; };
+		F911446925FBA8BE00B8D9BA /* PressureViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PressureViewModel.swift; sourceTree = "<group>"; };
+		F911446A25FBA8BE00B8D9BA /* HumidityViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HumidityViewModel.swift; sourceTree = "<group>"; };
+		F911446B25FBA8BE00B8D9BA /* WeatherViewModelProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherViewModelProtocol.swift; sourceTree = "<group>"; };
+		F911446C25FBA8BE00B8D9BA /* TemperatureViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TemperatureViewModel.swift; sourceTree = "<group>"; };
+		F911446D25FBA8BE00B8D9BA /* CurrentWeatherViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentWeatherViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +125,7 @@
 		F91143FE25FB772600B8D9BA /* DupljeZevsVreme */ = {
 			isa = PBXGroup;
 			children = (
+				F911446525FBA8B400B8D9BA /* ViewModel */,
 				F91143FF25FB772600B8D9BA /* DupljeZevsVremeApp.swift */,
 				F911440125FB772600B8D9BA /* ContentView.swift */,
 				F911440325FB772700B8D9BA /* Assets.xcassets */,
@@ -169,6 +186,21 @@
 				F911443725FB9AAE00B8D9BA /* DupljeZevsVremeModelBuilder.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		F911446525FBA8B400B8D9BA /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				F911446D25FBA8BE00B8D9BA /* CurrentWeatherViewModel.swift */,
+				F911446A25FBA8BE00B8D9BA /* HumidityViewModel.swift */,
+				F911446925FBA8BE00B8D9BA /* PressureViewModel.swift */,
+				F911446825FBA8BE00B8D9BA /* RainViewModel.swift */,
+				F911446625FBA8BE00B8D9BA /* SunViewModel.swift */,
+				F911446C25FBA8BE00B8D9BA /* TemperatureViewModel.swift */,
+				F911446B25FBA8BE00B8D9BA /* WeatherViewModelProtocol.swift */,
+				F911446725FBA8BE00B8D9BA /* WindViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -272,10 +304,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				F911440225FB772600B8D9BA /* ContentView.swift in Sources */,
+				F911447125FBA8BE00B8D9BA /* PressureViewModel.swift in Sources */,
+				F911446E25FBA8BE00B8D9BA /* SunViewModel.swift in Sources */,
+				F911447525FBA8BE00B8D9BA /* CurrentWeatherViewModel.swift in Sources */,
+				F911447225FBA8BE00B8D9BA /* HumidityViewModel.swift in Sources */,
 				F911443825FB9AAE00B8D9BA /* DupljeZevsVremeModelBuilder.swift in Sources */,
 				F911443325FB799E00B8D9BA /* DupljeZevsVremeModel.swift in Sources */,
+				F911447025FBA8BE00B8D9BA /* RainViewModel.swift in Sources */,
+				F911446F25FBA8BE00B8D9BA /* WindViewModel.swift in Sources */,
 				F911440025FB772600B8D9BA /* DupljeZevsVremeApp.swift in Sources */,
 				F911442B25FB77AA00B8D9BA /* DupljeZevsVremeAPIClient.swift in Sources */,
+				F911447325FBA8BE00B8D9BA /* WeatherViewModelProtocol.swift in Sources */,
+				F911447425FBA8BE00B8D9BA /* TemperatureViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
