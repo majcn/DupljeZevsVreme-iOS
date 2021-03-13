@@ -14,6 +14,19 @@ enum DupljeZevsVremeModelBuilder {
     return formatter
   }()
 
+  private static let beaufortScaleDesc = [
+    "Tišina",
+    "Lahek vetrič",
+    "Vetrič",
+    "Slab veter",
+    "Zmeren veter",
+    "Zmerno močan veter",
+    "Močan veter",
+    "Zelo močan veter",
+    "Viharni veter",
+    "Vihar"
+  ]
+
   private class DupljeZevsVremeRawData {
     let rawdata: [String]
 
@@ -64,7 +77,7 @@ enum DupljeZevsVremeModelBuilder {
       windDir: rawdata.string(11),
       windAvg: rawdata.double(5),
       windGust: rawdata.double(40),
-      beaufort: rawdata.int(12),
+      beaufort: beaufortScaleDesc[rawdata.int(12)],
       todayWindGust: rawdata.double(32),
       todayWindGustTime: rawdata.date(33),
       todayWindrun: rawdata.double(17)

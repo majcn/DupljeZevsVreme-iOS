@@ -31,7 +31,7 @@ struct DupljeZevsVremeModel {
     let windDir: String
     let windAvg: Double
     let windGust: Double
-    let beaufort: Int
+    let beaufort: String
     let todayWindGust: Double
     let todayWindGustTime: Date
     let todayWindrun: Double

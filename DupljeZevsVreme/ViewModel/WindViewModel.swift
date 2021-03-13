@@ -7,19 +7,6 @@
 
 import Foundation
 
-private let beaufortScaleDesc = [
-  "Tišina",
-  "Lahek vetrič",
-  "Vetrič",
-  "Slab veter",
-  "Zmeren veter",
-  "Zmerno močan veter",
-  "Močan veter",
-  "Zelo močan veter",
-  "Viharni veter",
-  "Vihar"
-]
-
 struct WindViewModel: WeatherListModelProtocol {
   let title = "Veter"
 
@@ -36,7 +23,7 @@ struct WindViewModel: WeatherListModelProtocol {
     windDir = model.wind.windDir
     windAvg = "\(model.wind.windAvg) km/h"
     windGust = "\(model.wind.windGust) km/h"
-    beaufort = beaufortScaleDesc[model.wind.beaufort]
+    beaufort = model.wind.beaufort
     todayWindGust = "\(model.wind.todayWindGust) km/h ob \(model.wind.todayWindGustTime.timeToString())"
     todayWindrun = "\(model.wind.todayWindrun) km"
   }
