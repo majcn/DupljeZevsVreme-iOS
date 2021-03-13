@@ -8,10 +8,8 @@
 import WidgetKit
 import Combine
 
-class DupljeZevsVremeWidgetProvider: TimelineProvider {
+struct DupljeZevsVremeWidgetProvider: TimelineProvider {
   typealias Entry = DupljeZevsVremeWidgetViewModel
-
-  private var timelineCancellable: AnyCancellable?
 
   func placeholder(in context: Context) -> Entry {
     DupljeZevsVremeWidgetViewModel.initTimelineEntry
@@ -25,13 +23,17 @@ class DupljeZevsVremeWidgetProvider: TimelineProvider {
     let currentDate = Date()
     let refreshDate = Calendar.current.date(byAdding: .minute, value: 15, to: currentDate)!
 
-    self.timelineCancellable = DupljeZevsVremeAPIClient.fetch()
-      .map { DupljeZevsVremeWidgetViewModel(model: $0) }
-      .replaceError(with: DupljeZevsVremeWidgetViewModel.initTimelineEntry)
-      .sink {
-        let timeline = Timeline(entries: [$0], policy: .after(refreshDate))
-        completion(timeline)
+    DupljeZevsVremeAPIClient.fetch { result in
+      let dupljeZevsVremeWidgetViewModel: DupljeZevsVremeWidgetViewModel
+      if case .success(let model) = result {
+        dupljeZevsVremeWidgetViewModel = DupljeZevsVremeWidgetViewModel(model: model)
+      } else {
+        dupljeZevsVremeWidgetViewModel = DupljeZevsVremeWidgetViewModel.initTimelineEntry
       }
+
+      let timeline = Timeline(entries: [dupljeZevsVremeWidgetViewModel], policy: .after(refreshDate))
+      completion(timeline)
+    }
   }
 }
 
