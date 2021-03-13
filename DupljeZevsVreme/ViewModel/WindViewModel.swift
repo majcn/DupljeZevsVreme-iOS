@@ -23,33 +23,33 @@ private let beaufortScaleDesc = [
 struct WindViewModel: WeatherListModelProtocol {
   let title = "Veter"
 
-  let windlatest: String
-  let winddir: String
-  let windavg: String
-  let windgust: String
+  let windLatest: String
+  let windDir: String
+  let windAvg: String
+  let windGust: String
   let beaufort: String
-  let today_windgust: String
-  let today_windrun: String
+  let todayWindGust: String
+  let todayWindrun: String
 
-  init(fromRawData rawdata: [String]) {
-    self.windlatest = rawdata[6] + " " + rawdata[13]
-    self.winddir = rawdata[11]
-    self.windavg = rawdata[5] + " " + rawdata[13]
-    self.windgust = rawdata[40] + " " + rawdata[13]
-    self.beaufort = Int(rawdata[12]).map { beaufortScaleDesc[$0] } ?? "Neznano"
-    self.today_windgust = rawdata[32] + " km/h ob " + rawdata[33]
-    self.today_windrun = rawdata[17] + " km"
+  init(model: DupljeZevsVremeModel) {
+    windLatest = "\(model.wind.windLatest) km/h"
+    windDir = model.wind.windDir
+    windAvg = "\(model.wind.windAvg) km/h"
+    windGust = "\(model.wind.windGust) km/h"
+    beaufort = beaufortScaleDesc[model.wind.beaufort]
+    todayWindGust = "\(model.wind.todayWindGust) ob \(model.wind.todayWindGustTime.timeToString())"
+    todayWindrun = "\(model.wind.todayWindrun) km"
   }
 
   func asPairArray() -> [(String, String)] {
     return [
-      ("Trenutna hitrost", self.windlatest),
-      ("Smer", self.winddir),
-      ("Povprečna hitrost (10 min)", self.windavg),
-      ("Najmočnejši sunek (10 min)", self.windgust),
-      ("Beaufortova lestvica", self.beaufort),
-      ("Današnji najmočnejši sunek", self.today_windgust),
-      ("Današnja pot vetra", self.today_windrun)
+      ("Trenutna hitrost", windLatest),
+      ("Smer", windDir),
+      ("Povprečna hitrost (10 min)", windAvg),
+      ("Najmočnejši sunek (10 min)", windGust),
+      ("Beaufortova lestvica", beaufort),
+      ("Današnji najmočnejši sunek", todayWindGust),
+      ("Današnja pot vetra", todayWindrun)
     ]
   }
 }

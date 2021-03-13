@@ -14,17 +14,17 @@ struct SunViewModel: WeatherListModelProtocol {
   let et: String
   let sunshineHours: String
 
-  init(fromRawData rawdata: [String]) {
-    self.solRad = rawdata[45] + " W/m2"
-    self.et = rawdata[44] + " mm"
-    self.sunshineHours = rawdata[55] + " h"
+  init(model: DupljeZevsVremeModel) {
+    solRad = "\(model.sun.solRad) W/m2"
+    et = "\(model.sun.et) mm"
+    sunshineHours = "\(model.sun.sunshineHours) h"
   }
 
   func asPairArray() -> [(String, String)] {
     return [
-      ("Trenutno sončno obsevanje", self.solRad),
-      ("Današnje izhlapevanje vode", self.et),
-      ("Današnje ure sonca", self.sunshineHours)
+      ("Trenutno sončno obsevanje", solRad),
+      ("Današnje izhlapevanje vode", et),
+      ("Današnje ure sonca", sunshineHours)
     ]
   }
 }

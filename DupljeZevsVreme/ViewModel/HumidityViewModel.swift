@@ -13,15 +13,15 @@ struct HumidityViewModel: WeatherListModelProtocol {
   let hum: String
   let dew: String
 
-  init(fromRawData rawdata: [String]) {
-    self.hum = rawdata[3] + "%"
-    self.dew = rawdata[59] + " °C"
+  init(model: DupljeZevsVremeModel) {
+    hum = "\(model.humidity.hum)%"
+    dew = "\(model.humidity.dew) °C"
   }
 
   func asPairArray() -> [(String, String)] {
     return [
-      ("Trenutna", self.hum),
-      ("Temperatura rosišča", self.dew)
+      ("Trenutna", hum),
+      ("Temperatura rosišča", dew)
     ]
   }
 }

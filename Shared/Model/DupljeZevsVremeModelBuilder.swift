@@ -65,8 +65,8 @@ enum DupljeZevsVremeModelBuilder {
       windAvg: rawdata.double(5),
       windGust: rawdata.double(40),
       beaufort: rawdata.int(12),
-      todayWindgust: rawdata.double(32),
-      todayWindgustTime: rawdata.date(33),
+      todayWindGust: rawdata.double(32),
+      todayWindGustTime: rawdata.date(33),
       todayWindrun: rawdata.double(17)
     )
 
