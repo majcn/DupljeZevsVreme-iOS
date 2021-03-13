@@ -11,7 +11,36 @@
 		F911440225FB772600B8D9BA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F911440125FB772600B8D9BA /* ContentView.swift */; };
 		F911440425FB772700B8D9BA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F911440325FB772700B8D9BA /* Assets.xcassets */; };
 		F911440725FB772700B8D9BA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F911440625FB772700B8D9BA /* Preview Assets.xcassets */; };
+		F911441625FB773C00B8D9BA /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F911441525FB773C00B8D9BA /* WidgetKit.framework */; };
+		F911441825FB773C00B8D9BA /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F911441725FB773C00B8D9BA /* SwiftUI.framework */; };
+		F911441B25FB773C00B8D9BA /* DupljeZevsVremeWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = F911441A25FB773C00B8D9BA /* DupljeZevsVremeWidget.swift */; };
+		F911441D25FB773D00B8D9BA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F911441C25FB773D00B8D9BA /* Assets.xcassets */; };
+		F911442125FB773D00B8D9BA /* DupljeZevsVremeWidgetExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = F911441325FB773C00B8D9BA /* DupljeZevsVremeWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F911441F25FB773D00B8D9BA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F91143F425FB772600B8D9BA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F911441225FB773C00B8D9BA;
+			remoteInfo = DupljeZevsVremeWidgetExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		F911442525FB773D00B8D9BA /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				F911442125FB773D00B8D9BA /* DupljeZevsVremeWidgetExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		F91143FC25FB772600B8D9BA /* DupljeZevsVreme.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DupljeZevsVreme.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -20,6 +49,12 @@
 		F911440325FB772700B8D9BA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F911440625FB772700B8D9BA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		F911440825FB772700B8D9BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F911441325FB773C00B8D9BA /* DupljeZevsVremeWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = DupljeZevsVremeWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		F911441525FB773C00B8D9BA /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		F911441725FB773C00B8D9BA /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		F911441A25FB773C00B8D9BA /* DupljeZevsVremeWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DupljeZevsVremeWidget.swift; sourceTree = "<group>"; };
+		F911441C25FB773D00B8D9BA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F911441E25FB773D00B8D9BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -30,6 +65,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F911441025FB773C00B8D9BA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F911441825FB773C00B8D9BA /* SwiftUI.framework in Frameworks */,
+				F911441625FB773C00B8D9BA /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -37,6 +81,8 @@
 			isa = PBXGroup;
 			children = (
 				F91143FE25FB772600B8D9BA /* DupljeZevsVreme */,
+				F911441925FB773C00B8D9BA /* DupljeZevsVremeWidget */,
+				F911441425FB773C00B8D9BA /* Frameworks */,
 				F91143FD25FB772600B8D9BA /* Products */,
 			);
 			sourceTree = "<group>";
@@ -45,6 +91,7 @@
 			isa = PBXGroup;
 			children = (
 				F91143FC25FB772600B8D9BA /* DupljeZevsVreme.app */,
+				F911441325FB773C00B8D9BA /* DupljeZevsVremeWidgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -69,6 +116,25 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		F911441425FB773C00B8D9BA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F911441525FB773C00B8D9BA /* WidgetKit.framework */,
+				F911441725FB773C00B8D9BA /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F911441925FB773C00B8D9BA /* DupljeZevsVremeWidget */ = {
+			isa = PBXGroup;
+			children = (
+				F911441A25FB773C00B8D9BA /* DupljeZevsVremeWidget.swift */,
+				F911441C25FB773D00B8D9BA /* Assets.xcassets */,
+				F911441E25FB773D00B8D9BA /* Info.plist */,
+			);
+			path = DupljeZevsVremeWidget;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -79,15 +145,34 @@
 				F91143F825FB772600B8D9BA /* Sources */,
 				F91143F925FB772600B8D9BA /* Frameworks */,
 				F91143FA25FB772600B8D9BA /* Resources */,
+				F911442525FB773D00B8D9BA /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				F911442025FB773D00B8D9BA /* PBXTargetDependency */,
 			);
 			name = DupljeZevsVreme;
 			productName = DupljeZevsVreme;
 			productReference = F91143FC25FB772600B8D9BA /* DupljeZevsVreme.app */;
 			productType = "com.apple.product-type.application";
+		};
+		F911441225FB773C00B8D9BA /* DupljeZevsVremeWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F911442225FB773D00B8D9BA /* Build configuration list for PBXNativeTarget "DupljeZevsVremeWidgetExtension" */;
+			buildPhases = (
+				F911440F25FB773C00B8D9BA /* Sources */,
+				F911441025FB773C00B8D9BA /* Frameworks */,
+				F911441125FB773C00B8D9BA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DupljeZevsVremeWidgetExtension;
+			productName = DupljeZevsVremeWidgetExtension;
+			productReference = F911441325FB773C00B8D9BA /* DupljeZevsVremeWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -99,6 +184,9 @@
 				LastUpgradeCheck = 1240;
 				TargetAttributes = {
 					F91143FB25FB772600B8D9BA = {
+						CreatedOnToolsVersion = 12.4;
+					};
+					F911441225FB773C00B8D9BA = {
 						CreatedOnToolsVersion = 12.4;
 					};
 				};
@@ -117,6 +205,7 @@
 			projectRoot = "";
 			targets = (
 				F91143FB25FB772600B8D9BA /* DupljeZevsVreme */,
+				F911441225FB773C00B8D9BA /* DupljeZevsVremeWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -128,6 +217,14 @@
 			files = (
 				F911440725FB772700B8D9BA /* Preview Assets.xcassets in Resources */,
 				F911440425FB772700B8D9BA /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F911441125FB773C00B8D9BA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F911441D25FB773D00B8D9BA /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -143,7 +240,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F911440F25FB773C00B8D9BA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F911441B25FB773C00B8D9BA /* DupljeZevsVremeWidget.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F911442025FB773D00B8D9BA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F911441225FB773C00B8D9BA /* DupljeZevsVremeWidgetExtension */;
+			targetProxy = F911441F25FB773D00B8D9BA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		F911440925FB772700B8D9BA /* Debug */ = {
@@ -265,6 +378,7 @@
 		F911440C25FB772700B8D9BA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -287,6 +401,7 @@
 		F911440D25FB772700B8D9BA /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -301,6 +416,48 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = si.majcn.DupljeZevsVreme;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		F911442325FB773D00B8D9BA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MYU2R75VRP;
+				INFOPLIST_FILE = DupljeZevsVremeWidget/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = si.majcn.DupljeZevsVreme.DupljeZevsVremeWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F911442425FB773D00B8D9BA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MYU2R75VRP;
+				INFOPLIST_FILE = DupljeZevsVremeWidget/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = si.majcn.DupljeZevsVreme.DupljeZevsVremeWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -323,6 +480,15 @@
 			buildConfigurations = (
 				F911440C25FB772700B8D9BA /* Debug */,
 				F911440D25FB772700B8D9BA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F911442225FB773D00B8D9BA /* Build configuration list for PBXNativeTarget "DupljeZevsVremeWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F911442325FB773D00B8D9BA /* Debug */,
+				F911442425FB773D00B8D9BA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
