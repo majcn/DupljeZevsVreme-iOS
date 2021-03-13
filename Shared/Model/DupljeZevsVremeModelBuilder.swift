@@ -96,7 +96,7 @@ enum DupljeZevsVremeModelBuilder {
     )
 
     return DupljeZevsVremeModel(
-      time: rawdata.date(1),
+      date: rawdata.date(1),
       location: "Zgornje Duplje",
 
       temperature: temperature,

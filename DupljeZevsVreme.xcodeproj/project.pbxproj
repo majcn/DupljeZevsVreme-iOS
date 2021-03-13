@@ -32,6 +32,7 @@
 		F911447C25FBABD600B8D9BA /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F911447B25FBABD600B8D9BA /* DateExtension.swift */; };
 		F911447D25FBABD600B8D9BA /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F911447B25FBABD600B8D9BA /* DateExtension.swift */; };
 		F911448625FBAE8F00B8D9BA /* WeatherListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F911448525FBAE8F00B8D9BA /* WeatherListView.swift */; };
+		F911448C25FBAF3300B8D9BA /* DupljeZevsVremeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F911448B25FBAF3300B8D9BA /* DupljeZevsVremeViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +84,7 @@
 		F911446C25FBA8BE00B8D9BA /* TemperatureViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TemperatureViewModel.swift; sourceTree = "<group>"; };
 		F911447B25FBABD600B8D9BA /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
 		F911448525FBAE8F00B8D9BA /* WeatherListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherListView.swift; sourceTree = "<group>"; };
+		F911448B25FBAF3300B8D9BA /* DupljeZevsVremeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DupljeZevsVremeViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -202,6 +204,7 @@
 				F911446825FBA8BE00B8D9BA /* RainViewModel.swift */,
 				F911446625FBA8BE00B8D9BA /* SunViewModel.swift */,
 				F911446925FBA8BE00B8D9BA /* PressureViewModel.swift */,
+				F911448B25FBAF3300B8D9BA /* DupljeZevsVremeViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -329,6 +332,7 @@
 				F911446E25FBA8BE00B8D9BA /* SunViewModel.swift in Sources */,
 				F911447225FBA8BE00B8D9BA /* HumidityViewModel.swift in Sources */,
 				F911443825FB9AAE00B8D9BA /* DupljeZevsVremeModelBuilder.swift in Sources */,
+				F911448C25FBAF3300B8D9BA /* DupljeZevsVremeViewModel.swift in Sources */,
 				F911443325FB799E00B8D9BA /* DupljeZevsVremeModel.swift in Sources */,
 				F911447025FBA8BE00B8D9BA /* RainViewModel.swift in Sources */,
 				F911446F25FBA8BE00B8D9BA /* WindViewModel.swift in Sources */,

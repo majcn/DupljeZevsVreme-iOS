@@ -62,7 +62,7 @@ struct DupljeZevsVremeModel {
     let pressureTrend_24h: Double
   }
 
-  let time: Date
+  let date: Date
   let location: String
   let temperature: Temperature
   let humidity: Humidity
