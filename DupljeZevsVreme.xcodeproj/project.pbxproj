@@ -16,6 +16,12 @@
 		F911441B25FB773C00B8D9BA /* DupljeZevsVremeWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = F911441A25FB773C00B8D9BA /* DupljeZevsVremeWidget.swift */; };
 		F911441D25FB773D00B8D9BA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F911441C25FB773D00B8D9BA /* Assets.xcassets */; };
 		F911442125FB773D00B8D9BA /* DupljeZevsVremeWidgetExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = F911441325FB773C00B8D9BA /* DupljeZevsVremeWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		F911442B25FB77AA00B8D9BA /* DupljeZevsVremeAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = F911442A25FB77AA00B8D9BA /* DupljeZevsVremeAPIClient.swift */; };
+		F911442C25FB77AA00B8D9BA /* DupljeZevsVremeAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = F911442A25FB77AA00B8D9BA /* DupljeZevsVremeAPIClient.swift */; };
+		F911443325FB799E00B8D9BA /* DupljeZevsVremeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F911443225FB799E00B8D9BA /* DupljeZevsVremeModel.swift */; };
+		F911443425FB799E00B8D9BA /* DupljeZevsVremeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F911443225FB799E00B8D9BA /* DupljeZevsVremeModel.swift */; };
+		F911443825FB9AAE00B8D9BA /* DupljeZevsVremeModelBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F911443725FB9AAE00B8D9BA /* DupljeZevsVremeModelBuilder.swift */; };
+		F911443925FB9AAE00B8D9BA /* DupljeZevsVremeModelBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F911443725FB9AAE00B8D9BA /* DupljeZevsVremeModelBuilder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +61,9 @@
 		F911441A25FB773C00B8D9BA /* DupljeZevsVremeWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DupljeZevsVremeWidget.swift; sourceTree = "<group>"; };
 		F911441C25FB773D00B8D9BA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F911441E25FB773D00B8D9BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F911442A25FB77AA00B8D9BA /* DupljeZevsVremeAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DupljeZevsVremeAPIClient.swift; sourceTree = "<group>"; };
+		F911443225FB799E00B8D9BA /* DupljeZevsVremeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DupljeZevsVremeModel.swift; sourceTree = "<group>"; };
+		F911443725FB9AAE00B8D9BA /* DupljeZevsVremeModelBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DupljeZevsVremeModelBuilder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +89,7 @@
 		F91143F325FB772600B8D9BA = {
 			isa = PBXGroup;
 			children = (
+				F911442825FB777300B8D9BA /* Shared */,
 				F91143FE25FB772600B8D9BA /* DupljeZevsVreme */,
 				F911441925FB773C00B8D9BA /* DupljeZevsVremeWidget */,
 				F911441425FB773C00B8D9BA /* Frameworks */,
@@ -133,6 +143,32 @@
 				F911441E25FB773D00B8D9BA /* Info.plist */,
 			);
 			path = DupljeZevsVremeWidget;
+			sourceTree = "<group>";
+		};
+		F911442825FB777300B8D9BA /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				F911443125FB798900B8D9BA /* Model */,
+				F911442925FB778100B8D9BA /* Network */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		F911442925FB778100B8D9BA /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				F911442A25FB77AA00B8D9BA /* DupljeZevsVremeAPIClient.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		F911443125FB798900B8D9BA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F911443225FB799E00B8D9BA /* DupljeZevsVremeModel.swift */,
+				F911443725FB9AAE00B8D9BA /* DupljeZevsVremeModelBuilder.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -236,7 +272,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				F911440225FB772600B8D9BA /* ContentView.swift in Sources */,
+				F911443825FB9AAE00B8D9BA /* DupljeZevsVremeModelBuilder.swift in Sources */,
+				F911443325FB799E00B8D9BA /* DupljeZevsVremeModel.swift in Sources */,
 				F911440025FB772600B8D9BA /* DupljeZevsVremeApp.swift in Sources */,
+				F911442B25FB77AA00B8D9BA /* DupljeZevsVremeAPIClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -244,7 +283,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F911443425FB799E00B8D9BA /* DupljeZevsVremeModel.swift in Sources */,
+				F911443925FB9AAE00B8D9BA /* DupljeZevsVremeModelBuilder.swift in Sources */,
 				F911441B25FB773C00B8D9BA /* DupljeZevsVremeWidget.swift in Sources */,
+				F911442C25FB77AA00B8D9BA /* DupljeZevsVremeAPIClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
