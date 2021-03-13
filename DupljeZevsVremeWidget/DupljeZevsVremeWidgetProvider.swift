@@ -25,8 +25,8 @@ struct DupljeZevsVremeWidgetProvider: TimelineProvider {
 
     DupljeZevsVremeAPIClient.fetch { result in
       let dupljeZevsVremeWidgetViewModel: DupljeZevsVremeWidgetViewModel
-      if case .success(let model) = result {
-        dupljeZevsVremeWidgetViewModel = DupljeZevsVremeWidgetViewModel(model: model)
+      if case .success(let data) = result {
+        dupljeZevsVremeWidgetViewModel = DupljeZevsVremeWidgetViewModel(model: data)
       } else {
         dupljeZevsVremeWidgetViewModel = DupljeZevsVremeWidgetViewModel.initTimelineEntry
       }
