@@ -10,7 +10,7 @@ import Foundation
 enum DupljeZevsVremeModelBuilder {
   private static let dateFormatter: DateFormatter = {
     let formatter = DateFormatter()
-    formatter.dateFormat = "dd/MM/yy HH:mm:ss"
+    formatter.dateFormat = "dd/MM/yy HH:mm"
     return formatter
   }()
 
@@ -34,7 +34,7 @@ enum DupljeZevsVremeModelBuilder {
     }
 
     func date(_ i: Int) -> Date {
-      return dateFormatter.date(from: "\(rawdata[0]) \(rawdata[i])")!
+      return dateFormatter.date(from: "\(rawdata[0]) \(rawdata[i].prefix(5))")!
     }
   }
 
