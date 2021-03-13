@@ -37,7 +37,7 @@ struct WindViewModel: WeatherListModelProtocol {
     windAvg = "\(model.wind.windAvg) km/h"
     windGust = "\(model.wind.windGust) km/h"
     beaufort = beaufortScaleDesc[model.wind.beaufort]
-    todayWindGust = "\(model.wind.todayWindGust) ob \(model.wind.todayWindGustTime.timeToString())"
+    todayWindGust = "\(model.wind.todayWindGust) km/h ob \(model.wind.todayWindGustTime.timeToString())"
     todayWindrun = "\(model.wind.todayWindrun) km"
   }
 

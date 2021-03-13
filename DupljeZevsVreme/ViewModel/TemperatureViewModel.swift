@@ -21,12 +21,12 @@ struct TemperatureViewModel: WeatherListModelProtocol {
 
   init(model: DupljeZevsVremeModel) {
     temp = "\(model.temperature.temp) °C"
-    tempTrend = "\(model.temperature.tempTrend) °C"
+    tempTrend = "\(model.temperature.tempTrend > 0 ? "+" : "")\(model.temperature.tempTrend) °C"
     outTempTrend_6h = "\(model.temperature.outTempTrend_6h) °C"
     outTempTrend_12h = "\(model.temperature.outTempTrend_12h) °C"
     outTempTrend_24h = "\(model.temperature.outTempTrend_24h) °C"
-    todayTempHigh = "\(model.temperature.todayTempHigh) °C"
-    todayTempLow = "\(model.temperature.todayTempLow) °C"
+    todayTempHigh = "\(model.temperature.todayTempHigh) °C ob \(model.temperature.todayTempHighTime.timeToString())"
+    todayTempLow = "\(model.temperature.todayTempLow) °C ob \(model.temperature.todayTempLowTime.timeToString())"
     appTemp = "\(model.temperature.appTemp) °C"
   }
 
