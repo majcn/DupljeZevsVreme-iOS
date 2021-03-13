@@ -9,23 +9,25 @@ import WidgetKit
 import SwiftUI
 
 struct Provider: TimelineProvider {
-  func placeholder(in context: Context) -> SimpleEntry {
-    SimpleEntry(date: Date())
+  typealias Entry = SimpleEntry
+
+  func placeholder(in context: Context) -> Entry {
+    Entry()
   }
 
-  func getSnapshot(in context: Context, completion: @escaping (SimpleEntry) -> Void) {
-    let entry = SimpleEntry(date: Date())
+  func getSnapshot(in context: Context, completion: @escaping (Entry) -> Void) {
+    let entry = Entry()
     completion(entry)
   }
 
   func getTimeline(in context: Context, completion: @escaping (Timeline<Entry>) -> Void) {
-    var entries: [SimpleEntry] = []
+    var entries: [Entry] = []
 
     // Generate a timeline consisting of five entries an hour apart, starting from the current date.
     let currentDate = Date()
     for hourOffset in 0 ..< 5 {
       let entryDate = Calendar.current.date(byAdding: .hour, value: hourOffset, to: currentDate)!
-      let entry = SimpleEntry(date: entryDate)
+      let entry = Entry(date: entryDate)
       entries.append(entry)
     }
 
@@ -36,13 +38,14 @@ struct Provider: TimelineProvider {
 
 struct SimpleEntry: TimelineEntry {
   let date: Date
-}
+  let dupljeZevsVremeWidgetViewModel: DupljeZevsVremeWidgetViewModel?
 
-struct DupljeZevsVremeWidgetEntryView: View {
-  var entry: Provider.Entry
-
-  var body: some View {
-    Text(entry.date, style: .time)
+  init(
+    date: Date = Date(),
+    dupljeZevsVremeWidgetViewModel: DupljeZevsVremeWidgetViewModel? = nil
+  ) {
+    self.date = date
+    self.dupljeZevsVremeWidgetViewModel = dupljeZevsVremeWidgetViewModel
   }
 }
 
@@ -61,7 +64,7 @@ struct DupljeZevsVremeWidget: Widget {
 
 struct DupljeZevsVremeWidget_Previews: PreviewProvider {
   static var previews: some View {
-    DupljeZevsVremeWidgetEntryView(entry: SimpleEntry(date: Date()))
+    DupljeZevsVremeWidgetEntryView(entry: SimpleEntry())
       .previewContext(WidgetPreviewContext(family: .systemSmall))
   }
 }
