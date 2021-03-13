@@ -9,9 +9,8 @@ import Foundation
 import Combine
 
 enum DupljeZevsVremeAPIClient {
-  
   private static let url = URL(string: "http://duplje.zevs.si/realtime2.txt")!
-  
+
   public static func fetch() -> Future<DupljeZevsVremeModel, Error> {
     Future { promise in
       let task = URLSession.shared.dataTask(with: url) { data, _, error in
@@ -19,7 +18,7 @@ enum DupljeZevsVremeAPIClient {
           promise(.failure(error!))
           return
         }
-        
+
         let model = DupljeZevsVremeModelBuilder.build(from: data!)
         promise(.success(model))
       }

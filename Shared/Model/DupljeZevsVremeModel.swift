@@ -20,12 +20,12 @@ struct DupljeZevsVremeModel {
     let todayTempLowTime: Date
     let appTemp: Double
   }
-  
+
   struct Humidity {
     let hum: Double
     let dew: Double
   }
-  
+
   struct Wind {
     let windLatest: Double
     let windDir: String
@@ -36,7 +36,7 @@ struct DupljeZevsVremeModel {
     let todayWindgustTime: Date
     let todayWindrun: Double
   }
-  
+
   struct Rain {
     let rainRate: Double
     let rainHour: Double
@@ -46,13 +46,13 @@ struct DupljeZevsVremeModel {
     let rainYear: Double
     let rainLastDays: Int
   }
-  
+
   struct Sun {
     let solRad: Double
     let et: Double
     let sunshineHours: Double
   }
-  
+
   struct Pressure {
     let pressure: Double
     let pressureTrend_1h: Double
@@ -61,7 +61,7 @@ struct DupljeZevsVremeModel {
     let pressureTrend_12h: Double
     let pressureTrend_24h: Double
   }
-  
+
   let time: Date
   let location: String
   let temperature: Temperature
