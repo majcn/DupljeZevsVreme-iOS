@@ -11,6 +11,7 @@ disabled_rules:
   - orphaned_doc_comment
   - todo
   - unused_capture_list
+  - line_length # (by majcn)
 
 opt_in_rules:
   - array_init
@@ -27,7 +28,7 @@ opt_in_rules:
   - enum_case_associated_values_count
   - fatal_error_message
   - first_where
-    #  - force_unwrapping (by majcn)
+#  - force_unwrapping (by majcn)
   - implicitly_unwrapped_optional
   - indentation_width
   - last_where
@@ -90,11 +91,6 @@ identifier_name:
 
 indentation_width:
   indentation_width: 2
-
-line_length:
-  ignores_urls: true
-  ignores_function_declarations: true
-  ignores_comments: true
 
 multiline_arguments:
   first_argument_location: next_line
