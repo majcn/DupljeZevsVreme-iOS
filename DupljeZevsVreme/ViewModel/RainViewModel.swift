@@ -19,7 +19,7 @@ struct RainViewModel: WeatherListModelProtocol {
   let rainLastDays: String
 
   init(model: DupljeZevsVremeModel) {
-    rainRate = "\(model.rain.rainRate) mm/h"
+    rainRate = "\(model.rain.rainRate) mm/hr"
     rainHour = "\(model.rain.rainHour) mm/hr"
     rainToday = "\(model.rain.rainToday) mm"
     rainYesterday = "\(model.rain.rainYesterday) mm"
