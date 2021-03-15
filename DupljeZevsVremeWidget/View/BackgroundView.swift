@@ -14,11 +14,11 @@ struct BackgroundView: View {
     Color(red: 20 / 255, green: 31 / 255, blue: 78 / 255),
     Color(red: 141 / 255, green: 87 / 255, blue: 151 / 255)
   ]
-  
+
   var body: some View {
     let gradient = Gradient(colors: BackgroundView.colorScheme)
     let linearGradient = LinearGradient(gradient: gradient, startPoint: .top, endPoint: .bottom)
-    
+
     return Rectangle()
       .fill(linearGradient)
       .blur(radius: 200, opaque: true)

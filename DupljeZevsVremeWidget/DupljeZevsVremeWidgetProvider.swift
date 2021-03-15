@@ -40,7 +40,7 @@ struct DupljeZevsVremeWidgetProvider: TimelineProvider {
 // MARK: -
 
 extension DupljeZevsVremeWidgetViewModel: TimelineEntry {
-    var date: Date {
-      time
-    }
+  var date: Date {
+    time
+  }
 }

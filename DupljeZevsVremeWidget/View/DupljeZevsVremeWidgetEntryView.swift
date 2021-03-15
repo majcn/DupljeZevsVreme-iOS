@@ -10,11 +10,11 @@ import SwiftUI
 
 struct DupljeZevsVremeWidgetEntryView: View {
   var dupljeZevsVremeWidgetViewModel: DupljeZevsVremeWidgetViewModel
-  
+
   var body: some View {
     ZStack {
       BackgroundView()
-      
+
       HStack {
         VStack(alignment: .leading) {
           HStack {
@@ -25,13 +25,13 @@ struct DupljeZevsVremeWidgetEntryView: View {
               .font(.caption2)
               .fontWeight(.ultraLight)
           }
-          
+
           Text(dupljeZevsVremeWidgetViewModel.temperature)
             .font(.title)
             .fontWeight(.light)
-          
+
           Spacer()
-          
+
           HStack {
             Text(Image(systemName: "person.fill.questionmark"))
               .font(.footnote)
@@ -41,7 +41,7 @@ struct DupljeZevsVremeWidgetEntryView: View {
               .font(.footnote)
               .fontWeight(.semibold)
           }
-          
+
           HStack {
             Text(Image(systemName: "wind"))
               .font(.footnote)
@@ -51,7 +51,7 @@ struct DupljeZevsVremeWidgetEntryView: View {
               .font(.footnote)
               .fontWeight(.semibold)
           }
-          
+
           HStack {
             Text(Image(systemName: "drop"))
               .font(.footnote)
@@ -64,16 +64,16 @@ struct DupljeZevsVremeWidgetEntryView: View {
         }
         .padding(.all)
         .foregroundColor(.white)
-        
+
         Spacer()
       }
-      
+
       VStack {
         Spacer()
-        
+
         HStack {
           Spacer()
-          
+
           Text(dupljeZevsVremeWidgetViewModel.time, style: .time)
             .font(.footnote)
             .fontWeight(.semibold)

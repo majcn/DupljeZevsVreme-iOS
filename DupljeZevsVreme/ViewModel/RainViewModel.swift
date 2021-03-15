@@ -17,7 +17,7 @@ struct RainViewModel: WeatherListModelProtocol {
   let rainMonth: String
   let rainYear: String
   let rainLastDays: String
-  
+
   init(model: DupljeZevsVremeModel) {
     rainRate = "\(model.rain.rainRate) mm/h"
     rainHour = "\(model.rain.rainHour) mm/hr"
